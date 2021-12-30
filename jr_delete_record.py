@@ -27,5 +27,3 @@ def delete_book(book_id):
 
 if __name__ == '__main__':
     delete_book(102)
-
-# delete a record
