@@ -1,0 +1,44 @@
+pip install mysql-connector-python
+
+# pip uninstall mysql-connector-python
+
+# Verifying MySQL Connector/Python installation
+>>> import mysql.connector
+>>> mysql.connector.connect(host='localhost',database='mysql',user='root',password='your pass')
+
+Should result in :
+<mysql.connector.connection.MySQLConnection object at 0x0187AE50>
+
+# Setting up sample database
+mysql>create database python_mysql;
+mysql>use python_mysql;
+mysql> source c:\mysql\python_mysql.sql
+mysql> SHOW TABLES;
+
+
+# Connecting to MySQL Database using MySQLConnection object
+# First, create a database configuration file named  config.ini and define a section with four parameters as follows:
+
+[mysql]
+host = localhost
+database = python_mysql
+user = root
+password =SecurePass1!
+
+# Second, create a new module named  python_mysql_dbconfig.py that reads the database configuration from the
+config.ini file and returns a dictionary object
+
+# test it :
+>>> from python_mysql_dbconfig import read_db_config
+>>> read_db_config()
+
+# should return :
+{'host': 'localhost', 'database': 'python_mysql', 'user': 'root', 'password': 'SecurePass1!'}
+
+# create connect2.py
+
+# test it :
+>python connect2.py
+Connecting to MySQL database...
+connection established.
+Connection closed.
