@@ -1,4 +1,4 @@
 # python_mysql
-python mysql examples
+Reference : python mysql connection
 
 Code to connect Python with MySQL
