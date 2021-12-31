@@ -21,6 +21,5 @@ def call_find_all_sp():
         cursor.close()
         conn.close()
 
-
 if __name__ == '__main__':
     call_find_all_sp()
